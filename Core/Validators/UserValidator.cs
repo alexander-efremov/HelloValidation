@@ -43,6 +43,7 @@ namespace Core.Validators
                     });
                 }
             }
+            return EmptyResult;
         }
 
         protected override Task<IDictionary<string, IEnumerable>> ValidateInternalAsync(CancellationToken token)

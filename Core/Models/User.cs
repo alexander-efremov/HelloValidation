@@ -10,13 +10,23 @@ namespace Core.Models
         public string Lastname
         {
             get { return _lastname; }
-            set { _lastname = value; }
+            set
+            {
+                if(Equals(Lastname, value)) return;
+                _lastname = value;
+                OnPropertyChanged();
+            }
         }
 
         public string Firstname
         {
             get { return _firstname; }
-            set { _firstname = value; }
+            set
+            {
+                if (Equals(Firstname, value)) return;
+                _firstname = value;
+                OnPropertyChanged();
+            }
         }
     }
 }
